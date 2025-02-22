@@ -1,7 +1,7 @@
 # 🛑 Devices Exposed to the Internet: Incident Summary
 
 ## 📌 Overview
-A Windows device (`lauren-win-targ`) was accidentally left internet-facing for **one day**. Within hours, malicious actors attempted to brute-force their way in.
+A Windows device (`Lauren-Win-Targ`) was accidentally left internet-facing for **one day**. Within hours, malicious actors attempted to brute-force their way in.
 
 ---
 
