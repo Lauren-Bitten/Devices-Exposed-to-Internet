@@ -1,0 +1,14 @@
+// Query to detect failed logins
+DeviceLogonEvents
+| where DeviceName == "lauren-win-targ"
+| where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
+| where ActionType == "LogonFailed"
+| summarize Attempts = count() by ActionType, RemoteIP, DeviceName
+| order by Attempts
+
+// Query to detect successful logins
+DeviceLogonEvents
+| where LogonType == "Network"
+| where ActionType == "LogonSuccess"
+| where AccountName == "labuser"
+| summarize count()
